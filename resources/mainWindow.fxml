@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="rootLayout" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Controller">
+    <children>
+        <MenuBar prefHeight="28.0" prefWidth="1200.0" VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" text="首页">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="退出" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="帮助">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="关于我们" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="375.0" prefWidth="674.0" VBox.vgrow="ALWAYS">
+            <children>
+                <SplitPane dividerPositions="0.21035058430717862" layoutX="8.0" layoutY="7.0" prefHeight="800.0" prefWidth="1200.0">
+                    <items>
+                        <AnchorPane minHeight="160.0" minWidth="138.0" prefHeight="160.0" prefWidth="138.0" snapToPixel="false">
+                            <children>
+                                <Button id="startButton" fx:id="startButton" layoutX="32.0" layoutY="239.0" mnemonicParsing="false" onAction="#Start" prefHeight="69.0" prefWidth="186.0" style="-fx-background-radius: 10;" text="启动">
+                                    <font>
+                                        <Font size="25.0" />
+                                    </font>
+                                </Button>
+                                <Button id="stopButton" fx:id="stopButton" layoutX="32.0" layoutY="348.0" mnemonicParsing="false" onAction="#Stop" prefHeight="69.0" prefWidth="186.0" style="-fx-background-radius: 10;" text="终止">
+                                    <font>
+                                        <Font size="25.0" />
+                                    </font>
+                                </Button>
+                                <Label alignment="CENTER" layoutX="21.0" layoutY="14.0" prefHeight="40.0" prefWidth="208.0" text="科欣智能复制" textAlignment="CENTER" textFill="#d36b6b">
+                                    <font>
+                                        <Font name="Microsoft JhengHei" size="29.0" />
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" layoutX="21.0" layoutY="773.0" prefHeight="23.0" prefWidth="208.0" text="关于我们" textAlignment="CENTER" textFill="#1a1a1a65">
+                                    <font>
+                                        <Font size="17.0" />
+                                    </font>
+                                </Label>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="35.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@copymove.png" />
+                           </image>
+                        </ImageView>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="534.0" prefWidth="857.0">
+                            <children>
+                                <Label alignment="CENTER" layoutX="98.0" layoutY="385.0" prefHeight="29.0" prefWidth="88.0" text="保存路径" textAlignment="CENTER" textFill="#282828">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Label>
+                                <ProgressBar id="jindutiao" fx:id="jindutiao" layoutX="34.0" layoutY="448.0" opacity="0.48" prefHeight="18.0" prefWidth="893.0" progress="0" style="-fx-accent: red;" />
+                                <TextField id="newpath" fx:id="newpath" disable="true" editable="false" layoutX="211.0" layoutY="385.0" prefHeight="29.0" prefWidth="557.0" promptText="请填写路径:C:\Windows\Fonts" style="-fx-background-radius: 5;" />
+                                <TextArea id="log" fx:id="log" editable="false" layoutX="34.0" layoutY="475.0" prefHeight="302.0" prefWidth="893.0" promptText="日志" wrapText="true">
+                                    <font>
+                                        <Font name="System Bold" size="11.0" />
+                                    </font>
+                                </TextArea>
+                                <Label id="jindutiaowenzi" fx:id="jindutiaowenzi" alignment="CENTER" layoutX="289.0" layoutY="420.0" prefHeight="28.0" prefWidth="400.0" textAlignment="CENTER" textFill="#282828">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                        <Button id="newpathButton" fx:id="FilepathButton" layoutX="778.0" layoutY="385.0" mnemonicParsing="false" onAction="#getnewpath" prefHeight="29.0" prefWidth="88.0" style="-fx-background-radius: 10;" text="选择文件夹" />
+                        <Label alignment="CENTER" layoutX="98.0" layoutY="21.0" prefHeight="29.0" prefWidth="88.0" text="数据库" textAlignment="CENTER" textFill="#282828">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="98.0" layoutY="51.0" prefHeight="29.0" prefWidth="88.0" text="url" textAlignment="CENTER" textFill="#282828">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="98.0" layoutY="80.0" prefHeight="29.0" prefWidth="88.0" text="用户名" textAlignment="CENTER" textFill="#282828">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="98.0" layoutY="113.0" prefHeight="29.0" prefWidth="88.0" text="密码" textAlignment="CENTER" textFill="#282828">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="98.0" layoutY="151.0" prefHeight="29.0" prefWidth="88.0" text="端口号" textAlignment="CENTER" textFill="#282828">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <ComboBox id="db" fx:id="db" layoutX="210.0" layoutY="24.0" prefWidth="150.0" promptText="选择" />
+                        <TextField fx:id="url" layoutX="205.0" layoutY="54.0" promptText="数据库连接" />
+                        <TextField fx:id="username" layoutX="205.0" layoutY="83.0" promptText="数据库用户名" />
+                        <TextField fx:id="userpassword" layoutX="205.0" layoutY="116.0" promptText="数据库密码" />
+                        <TextField fx:id="port" layoutX="205.0" layoutY="154.0" promptText="数据库端口" />
+                        <Label alignment="CENTER" layoutX="98.0" layoutY="188.0" prefHeight="29.0" prefWidth="88.0" text="数据库名" textAlignment="CENTER" textFill="#282828">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="name" layoutX="205.0" layoutY="191.0" promptText="数据库名" />
+                        <Label alignment="CENTER" layoutX="412.0" layoutY="21.0" prefHeight="29.0" prefWidth="88.0" text="SQL:" textAlignment="CENTER" textFill="#282828">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="sql" layoutX="441.0" layoutY="58.0" prefHeight="69.0" prefWidth="425.0" promptText="填写sql语句" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </TextArea>
+                        <Label alignment="CENTER" layoutX="412.0" layoutY="151.0" prefHeight="29.0" prefWidth="249.0" text="读取字段（分号;隔离）:" textAlignment="CENTER" textFill="#282828">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="field" layoutX="441.0" layoutY="188.0" prefHeight="69.0" prefWidth="425.0" promptText="填写所需要提取的字段" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </TextArea>
+                        <Label alignment="CENTER" layoutX="98.0" layoutY="223.0" prefHeight="29.0" prefWidth="88.0" text="线程数" textAlignment="CENTER" textFill="#282828">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="205.0" layoutY="226.0" promptText="默认为2" fx:id="xianchengshu" />
+                        <Label alignment="CENTER" layoutX="98.0" layoutY="257.0" prefHeight="29.0" prefWidth="88.0" text="IP" textAlignment="CENTER" textFill="#282828">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="ip" layoutX="205.0" layoutY="260.0" promptText="http://125.64.43.130:88/" />
+                        <Label alignment="CENTER" layoutX="98.0" layoutY="286.0" prefHeight="29.0" prefWidth="88.0" text="替换位置" textAlignment="CENTER" textFill="#282828">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tihuanweizhi" layoutX="205.0" layoutY="289.0" promptText="请填写数字" />
+                        <TextArea fx:id="field1" editable="false" layoutX="378.0" layoutY="265.0" prefHeight="108.0" prefWidth="488.0" text="举例：imgs/goods/asd/asdasd/goods_170_20191107114308862512_1.jpg&#10;如何替换其中链接？ps:输入0,或1或2或3或4进行替代&#10;输入0：xxx/goods/asd/asdasd/goods_170_20191107114308862512_1.jpg&#10;输入1:imgs/xxx/asd/asdasd/goods_170_20191107114308862512_1.jpg&#10;输入2:imgs/goods/xxx/asdasd/goods_170_20191107114308862512_1.jpg&#10;......" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </TextArea>
+                        <Label alignment="CENTER" layoutX="98.0" layoutY="319.0" prefHeight="29.0" prefWidth="88.0" text="替换内容" textAlignment="CENTER" textFill="#282828">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tihuanneirong" layoutX="205.0" layoutY="322.0" promptText="替换内容" />
+                            </children>
+                        </AnchorPane>
+                    </items>
+                </SplitPane>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

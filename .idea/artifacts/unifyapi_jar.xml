@@ -1,0 +1,32 @@
+<component name="ArtifactManager">
+  <artifact name="unifyapi:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/unifyapi_jar</output-path>
+    <root id="root">
+      <element id="archive" name="unifyapi.jar">
+        <element id="module-output" name="unifyapi" />
+      </element>
+      <element id="file-copy" path="$PROJECT_DIR$/src/sample/lib/httpcore-4.4.10.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/sample/lib/commons-beanutils-1.7.0.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/sample/lib/quartz-jobs-2.2.1.jar" />
+      <element id="library" level="project" name="lombok-1.18.12" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/sample/lib/fastjson-1.2.7.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/sample/lib/commons-codec-1.10.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/sample/lib/ezmorph-1.0.3.jar" />
+      <element id="library" level="project" name="sqljdbc4-4.0" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/sample/lib/slf4j-api-1.7.25.jar" />
+      <element id="library" level="module" name="JUnit4" module-name="unifyapi" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/sample/lib/commons-logging-1.1.1.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/sample/lib/httpclient-4.5.6.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/sample/lib/json-lib-2.4-jdk15.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/sample/lib/commons-lang-2.5.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/sample/lib/mysql-connector-java-8.0.18.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/sample/lib/commons-httpclient-3.1.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/sample/lib/ini4j-0.5.4.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/sample/lib/log4j-1.2.17.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/sample/lib/quartz-2.2.1.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/sample/lib/c3p0-0.9.1.1.jar" />
+      <element id="library" level="project" name="sqlite-jdbc-3.7.2" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/sample/lib/commons-collections-3.1.jar" />
+    </root>
+  </artifact>
+</component>
